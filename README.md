@@ -413,11 +413,15 @@
   
     `> buy_ticket -u Texas -i HAPPY_TRAIN -d 08-17 -n 800 -f 中院 -t 下院`
   
-    `257000`
+    `411200`
   
     `> buy_ticket -u Lappland -i HAPPY_TRAIN -d 08-16 -n 500 -f 上院 -t 下院 -q true`
   
     `queue`
+    
+  - 样例解释
+  
+    用户`Texas`购买了8.17从中院出发的火车票800张，在上面的`add_train`操作中，8.16从上院出发的火车会在8.17到达中院，所以事实上`Lappland`试图购买的票的火车和`Texas`是同一辆车，所以`Lappland`购买不了500张票。
   
 - [F] `query_order`
 
